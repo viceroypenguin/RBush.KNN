@@ -31,7 +31,7 @@ after_test:
     - cmd: nuget pack ./RBush.KNN/RBush.KNN.nuspec -version %appveyor_build_version%
 
 artifacts:
-  - path: RBush.KNN\bin\Release\netstandard1.2\RBush.dll
+  - path: RBush.KNN\bin\Release\netstandard1.2\RBush.KNN.dll
     name: RBush.KNN.dll
   - path: '**\*.nupkg'
 

@@ -25,9 +25,10 @@ namespace RBush
 						maxX: x + maxDistance.Value,
 						maxY: y + maxDistance.Value));
 
-			IEnumerable<(T i, double dist)> distances = items
-				.Select(i => (i, dist: i.Envelope.DistanceTo(x, y)))
-				.OrderBy(i => i.dist);
+			var distances = items
+				.Select(i => new { i, dist = i.Envelope.DistanceTo(x, y), })
+				.OrderBy(i => i.dist)
+				.AsEnumerable();
 
 			if (maxDistance.HasValue)
 				distances = distances.TakeWhile(i => i.dist <= maxDistance.Value);

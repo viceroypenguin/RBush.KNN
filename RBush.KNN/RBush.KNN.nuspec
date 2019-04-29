@@ -1,0 +1,23 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>RBush.KNN</id>
+    <version>$version$</version>
+    <authors>Stuart Turner</authors>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/viceroypenguin/RBush.KNN</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>k-Nearest Neighbors Search Algorithm, based on the RBush data structure</description>
+    <copyright>Copyright 2019 Turning Code, LLC</copyright>
+    <tags>.NET tree search spatial kNN k-Nearest</tags>
+
+    <dependencies>
+      <dependency id="System.Collections.Immutable" version="1.3" />
+      <dependency id="System.ValueTuple" version="4.3.1" />
+      <dependency id="RBush" version="2.0.41" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\netstandard1.2\RBush.KNN.dll" target="lib\netstandard1.2" />
+  </files>
+</package>
